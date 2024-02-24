@@ -107,7 +107,7 @@ public function create()
 
 
 
-    //cuadratica
+    // formula cuadratica
    public function createCuadratica()
     {
         return view('cuadratica');
@@ -125,16 +125,11 @@ public function create()
         $b = $request->input('b');
         $c = $request->input('c');
 
-        // Calcular el discriminante
         $discriminante = $b ** 2 - 4 * $a * $c;
-
-        // Inicializar las raíces como null
         $raiz1 = null;
         $raiz2 = null;
 
-        // Verificar si el discriminante es negativo (sin raíces reales)
         if ($discriminante >= 0) {
-            // Calcular las raíces
             $raiz1 = (-$b + sqrt($discriminante)) / (2 * $a);
             $raiz2 = (-$b - sqrt($discriminante)) / (2 * $a);
         }
